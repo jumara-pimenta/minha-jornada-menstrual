@@ -352,7 +352,7 @@ export const CHAPTERS = [
   {
     id: "ch4_nina4a",
     type: "nina",
-    text: "Perfeito! 💛 Pedir ajuda é um sinal de maturidade, não de fraqueza. Toda mulher já passou por isso!",
+    text: "Perfeito! 💛 Pedir ajuda é um sinal de maturidade, não de fraqueza. Toda pessoa que menstrua já passou por isso!",
     next: "ending",
   },
   {
