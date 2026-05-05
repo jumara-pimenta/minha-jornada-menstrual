@@ -462,10 +462,12 @@ export const ENDINGS = {
 };
 
 export const getEnding = (emotion, body) => {
-  const total = emotion + body;
-  if (total >= 10) return ENDINGS.high;
-  if (total >= 5) return ENDINGS.medium;
-  return ENDINGS.low;
+  // Final 1: ambos precisam estar bem (>= 7 emoção E >= 6 corpo)
+  if (emotion >= 7 && body >= 6) return ENDINGS.high;
+  // Final 3: algum dos dois muito baixo (< 4)
+  if (emotion < 4 || body < 4) return ENDINGS.low;
+  // Final 2: tudo no meio
+  return ENDINGS.medium;
 };
 
 export const LEARNED_TOPICS = [
