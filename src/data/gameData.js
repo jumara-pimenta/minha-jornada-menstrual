@@ -410,7 +410,7 @@ export const CYCLE_PHASES = [
     name: "Ovulação",
     color: "#ffd6a5",
     description:
-      "Mais uma fase do seu ciclo menstrual. Você está no pico de energia! É comum se sentir mais sociável, confiante e com vontade de se comunicar.",
+      "Fase ovulatória do ciclo menstrual. Você está no pico de energia! É comum se sentir mais sociável, confiante e com vontade de se comunicar.",
     symptoms: ["Alta energia", "Sociável", "Confiante"],
     tip: "Ótimo momento para trabalhos em grupo e atividades sociais!",
     choices: [
@@ -425,7 +425,7 @@ export const CYCLE_PHASES = [
     color: "#c9b1ff",
     description:
       "Você pode se sentir um pouco mais cansada, emotiva ou irritada. São mudanças hormonais normais!",
-    symptoms: ["Cansaço", "Sensibilidade", "TPM"],
+    symptoms: ["Cansaço", "Sensibilidade", "Emoções"],
     tip: "Cuide-se com carinho: chá, música, descanso e conversas com quem você confia.",
     choices: [
       { label: "💆 Cuidar de si", emotion: 1, body: 0, feedback: "Você merece esse cuidado todo! 💛" },
@@ -462,12 +462,10 @@ export const ENDINGS = {
 };
 
 export const getEnding = (emotion, body) => {
-  // Final 1: ambos precisam estar bem (>= 7 emoção E >= 6 corpo)
-  if (emotion >= 7 && body >= 6) return ENDINGS.high;
-  // Final 3: algum dos dois muito baixo (< 4)
-  if (emotion < 4 || body < 4) return ENDINGS.low;
-  // Final 2: tudo no meio
-  return ENDINGS.medium;
+  const total = emotion + body;
+  if (total >= 10) return ENDINGS.high;
+  if (total >= 5) return ENDINGS.medium;
+  return ENDINGS.low;
 };
 
 export const LEARNED_TOPICS = [

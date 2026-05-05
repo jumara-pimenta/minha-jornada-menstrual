@@ -79,7 +79,6 @@ export default function CharacterScreen() {
                 maxLength={20}
                 onChange={(e) => { setName(e.target.value); setTouched(true); }}
                 className={`name-input ${hasError ? "name-input-error" : ""}`}
-                autoFocus
               />
               {hasError && (
                 <span className="name-error">Por favor, digite seu nome 💛</span>
