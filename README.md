@@ -105,6 +105,8 @@ public/
 
 ---
 
+Acesse o jogo aqui: [Jornada Menstrual](https://jornadamenstrual.netlify.app/)
+
 ## 👩‍💻 Criadora
 
 Desenvolvido com 💛 por **Jumara Pimenta**
