@@ -1,0 +1,94 @@
+.game-screen {
+  min-height: 100dvh;
+  background: linear-gradient(160deg, #ffe4f0 0%, #ede4ff 100%);
+}
+
+.game-player-tag {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1.2rem;
+  font-size: 0.85rem;
+  color: #9b7ec8;
+  font-weight: 700;
+}
+
+.game-player-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.game-player-avatar img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+
+.game-content {
+  padding: 0.5rem 1rem 2rem;
+}
+
+.game-back-btn {
+  background: none;
+  border: none;
+  color: #c9a0d8;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0 0.2rem;
+  line-height: 3;
+  transition: color 0.15s;
+}
+
+.game-back-btn:hover {
+  color: #7b5ea7;
+}
+
+.game-confirm-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(80, 40, 100, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+  backdrop-filter: blur(3px);
+}
+
+.game-confirm-box {
+  background: #fff;
+  border-radius: 20px;
+  padding: 1.6rem 1.8rem;
+  max-width: 320px;
+  width: 90%;
+  box-shadow: 0 8px 32px rgba(120, 60, 160, 0.2);
+  text-align: center;
+  animation: slideUp 0.25s ease;
+}
+
+.game-confirm-box p {
+  color: #4a3560;
+  font-size: 1rem;
+  margin: 0 0 1.2rem;
+  line-height: 1.6;
+}
+
+.game-confirm-box small {
+  color: #b07ac0;
+  font-size: 0.82rem;
+}
+
+.game-confirm-actions {
+  display: flex;
+  gap: 0.7rem;
+  justify-content: center;
+}
